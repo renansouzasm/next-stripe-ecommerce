@@ -1,0 +1,54 @@
+.card {
+  height: 33rem;
+  width: 23rem;
+  background-color: var(--primary-text-color);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  opacity: 85%;
+}
+
+.thumbnail,
+.infos-product {
+  height: 16.5rem;
+  width: 100%;
+}
+
+.thumbnail {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail > img {
+  height: 100%;
+}
+
+.infos-product {
+  padding: 1.5rem;
+  color: var(--secondary-text-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviews,
+.title {
+  font-size: 1.4rem;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
