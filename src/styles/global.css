@@ -1,6 +1,6 @@
 :root {
   --bg-color: #121212;
-  --bg-color1: #eeeeee;
+  --bg-color1: #fff;
   --bg-color2: #262626;
   --primary-text-color: #fff;
   --secondary-text-color: #000;
@@ -49,6 +49,12 @@ a {
 
 .main {
   grid-row: 2/3;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 @media screen and (max-width: 575px) {

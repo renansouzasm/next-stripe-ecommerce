@@ -11,7 +11,7 @@ import { AppContext } from "../../context/AppContext";
 
 export const Home = () => {
   const [productsList, setProductsList] = useState([]);
-  const { query } = useContext(AppContext);
+  const { query, product } = useContext(AppContext);
 
   useEffect(() => {
     fetchApi(query).then((result) => {
@@ -37,7 +37,7 @@ export const Home = () => {
         <section className="products-container">
           <div className="grid-products">
             <div className="categories-wrapper">
-              <p>{query}</p>
+              <p>{query} {product ? product.title : "seila"}</p>
             </div>
 
             {productsList.length > 0 ? (

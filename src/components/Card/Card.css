@@ -38,12 +38,6 @@
   font-size: 1.4rem;
 }
 
-.reviews {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-
 .title {
   font-weight: 600;
 }
