@@ -86,7 +86,7 @@
   }
 
   .input-wrapper {
-    width: 23rem;
+    max-width: 30rem;
   }
 
   .menu {
@@ -96,6 +96,12 @@
 
 @media screen and (max-width: 430px) {
   .input-wrapper {
-    width: 16rem;
+    max-width: 22rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .input-wrapper {
+    max-width: 16rem;
   }
 }

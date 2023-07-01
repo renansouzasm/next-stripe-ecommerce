@@ -4,6 +4,7 @@ import { AppContext } from "../../context/AppContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Star, ShoppingCartSimple } from "@phosphor-icons/react";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 export const Product = () => {
   const { product } = useContext(AppContext);
@@ -25,7 +26,7 @@ export const Product = () => {
               <div className="infos">
                 <hgroup>
                   <h1>{title}</h1>
-                  <h2>{price}</h2>
+                  <h2>{formatCurrency(price, "BRL")}</h2>
                 </hgroup>
 
                 <div className="reviews">

@@ -24,7 +24,14 @@
   justify-content: center;
 }
 
+.products-container > p {
+  font-size: 2.2rem;
+}
+
 .categories-wrapper {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
   overflow: scroll;
   margin-bottom: 1rem;
   grid-column: 1/5;
@@ -35,13 +42,12 @@
   width: 0rem;
 }
 
-.categories-wrapper > p {
+.categories-wrapper > li {
   font-size: 2.2rem;
 }
 
 .grid-products {
   margin: auto;
-
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(4, 1fr);
@@ -92,7 +98,4 @@
   .categories-wrapper {
     grid-column: 1;
   }
-}
-
-@media screen and (max-width: 430px) {
 }

@@ -4,6 +4,7 @@ import { Star } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import { useContext } from "react";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 export const Card = ({ product }) => {
   const { title, price, thumbnail } = product;
@@ -33,7 +34,7 @@ export const Card = ({ product }) => {
             Reviews
           </div>
           <p className="title">{title}</p>
-          <p className="price">R$ {price}</p>
+          <p className="price">{formatCurrency(price, "BRL")}</p>
         </div>
       </div>
     </Link>

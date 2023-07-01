@@ -35,17 +35,22 @@ export const Home = () => {
         </section>
 
         <section className="products-container">
-          <div className="grid-products">
-            <div className="categories-wrapper">
-              <p>{query} {product ? product.title : "seila"}</p>
-            </div>
+          {productsList.length > 0 ? (
+            <div className="grid-products">
+              <ul className="categories-wrapper">
+                <li>{query}</li>
+                <li>Categoria1</li>
+                <li>Categoria2</li>
+                <li>Categoria3</li>
+              </ul>
 
-            {productsList.length > 0 ? (
-              productsList.map((item) => <Card key={item.id} product={item} />)
-            ) : (
-              <p>Nehum produto encontrado</p>
-            )}
-          </div>
+              {productsList.map((item) => (
+                <Card key={item.id} product={item} />
+              ))}
+            </div>
+          ) : (
+            <p>Nehum produto encontrado..</p>
+          )}
         </section>
       </main>
     </>

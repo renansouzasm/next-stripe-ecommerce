@@ -23,12 +23,13 @@
 
 @media screen and (max-width: 575px) {
   .footer {
-    height: 10rem;
+    height: 15rem;
     flex-direction: column;
+    text-align: center;
   }
 
   .footer > p,
   .github {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 }
