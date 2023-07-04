@@ -8,14 +8,14 @@
 ![figmaPreviewResponsive](https://github.com/renansouzasm/React-store/assets/101893896/43ec4e07-12cb-4421-ae9c-c6213f5c192d)
 
 
-Mesmo estado incompleto, já foi realizado o deploy do Projeto para vizualizar e "testar" o desempenho e reponsividade, assim, outros detalhes serão adicionados
+Mesmo estando incompleto, já foi realizado o deploy do Projeto para vizualizar e "testar" o desempenho e reponsividade, assim, outros detalhes serão adicionados
 logo logo para a finzalação do Projeto, pois o planejamento já está pronto, apenas não foi feito o código
 
 Em andamento (ainda não foi adicionado ao repositório)
-- Completar a aba do menu, para ficar disponível apos o clique no ícone
-- Adição, Remoção e Alteração de quantidade de itens no Carrinho (via LocalStorage)
+- Completar a aba do menu, para ficar disponível após o clique no ícone
+- Criação da Página do Carrinho de Compras para exibir os itens adicionados ao localStorage
 
-O que poderia ser Adcionado
+O que poderia ser Adicionado
 - Favoritos (algo parecido com o conceito do carrinho)
 - Utilização de algum framework, como tailwind, etc..
-- Página para entrar me contato com o suporte
+- Página para entrar em contato com o suporte
