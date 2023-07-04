@@ -3,14 +3,14 @@
   width: 23rem;
   background-color: var(--primary-text-color);
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  opacity: 85%;
+  grid-template-rows: repeat(2, 16.5rem);
+  opacity: 90%;
 }
 
 .thumbnail,
 .infos-product {
-  height: 16.5rem;
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
 }
 
 .thumbnail {
@@ -21,7 +21,8 @@
 }
 
 .thumbnail > img {
-  height: 100%;
+  max-height: 90%;
+  max-width: 90%;
 }
 
 .infos-product {
@@ -40,9 +41,21 @@
 
 .title {
   font-weight: 600;
+  max-height: 40%;
+  overflow-y: hidden;
 }
 
 .price {
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 640px) {
+  .card {
+    border-radius: 0.4rem;
+    height: 14.4rem;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 15rem;
+  }
 }

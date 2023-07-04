@@ -16,13 +16,12 @@ export const Header = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-
     setQuery(search);
   };
 
   return (
     <header className="header">
-      <Link to={"/"}>
+      <Link to={"/"} className="logoGroup">
         <p className="logo">
           <GameController size={32} /> <strong>React Store</strong>
         </p>

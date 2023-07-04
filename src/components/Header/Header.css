@@ -21,7 +21,8 @@
 .input-wrapper {
   background-color: var(--bg-color2);
   height: 4rem;
-  width: 40rem;
+  width: 65%;
+  max-width: 60rem;
   padding: 0 20px;
 }
 
@@ -75,33 +76,20 @@
 }
 
 @media screen and (max-width: 768px) {
-  .btn-cart {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 575px) {
   .header {
     padding: 0 10px;
   }
 
   .input-wrapper {
-    max-width: 30rem;
+    border-radius: 10rem;
+    width: 65%;
+  }
+
+  .btn-cart {
+    display: none;
   }
 
   .menu {
     width: 100vw;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .input-wrapper {
-    max-width: 22rem;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .input-wrapper {
-    max-width: 16rem;
   }
 }

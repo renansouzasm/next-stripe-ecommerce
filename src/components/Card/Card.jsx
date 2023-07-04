@@ -3,19 +3,27 @@ import "./Card.css";
 import { Star } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { formatCurrency } from "../../utils/formatCurrency";
 
-export const Card = ({ product }) => {
-  const { title, price, thumbnail } = product;
-  const { setProduct } = useContext(AppContext);
+export const Card = ({ item }) => {
+  const { id, title, price, thumbnail } = item;
+  const { setStorage } = useContext(AppContext);
 
-  const handle = () => {
-    setProduct(product);
+  const showProduct = () => {
+    const product = {
+      id,
+      title,
+      price,
+      thumbnail,
+    };
+
+    setStorage("storedProduct", product);
+    return;
   };
 
   return (
-    <Link to={"/product"} onClick={handle}>
+    <Link onClick={showProduct} to={"/product"}>
       <div className="card">
         <div className="thumbnail">
           <img

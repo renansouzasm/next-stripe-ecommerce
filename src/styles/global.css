@@ -41,6 +41,10 @@ a {
   color: var(--primary-text-color);
 }
 
+ul {
+  list-style: none;
+}
+
 #root {
   height: 100vh;
   display: grid;

@@ -5,17 +5,17 @@ import { Card } from "../Card/Card";
 import xboxBanner from "../../assets/xboxBanner.jpg";
 import iphoneBanner from "../../assets/iphoneBanner.jpg";
 import ps5Banner from "../../assets/ps5Banner.jpg";
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { fetchApi } from "../../api/api.js";
 import { AppContext } from "../../context/AppContext";
 
 export const Home = () => {
-  const [productsList, setProductsList] = useState([]);
-  const { query, product } = useContext(AppContext);
+  const { query } = useContext(AppContext);
+  const [productCatalog, setProductCatalog] = useState([]);
 
   useEffect(() => {
     fetchApi(query).then((result) => {
-      setProductsList(result);
+      setProductCatalog(result);
     });
   }, [query]);
 
@@ -35,7 +35,7 @@ export const Home = () => {
         </section>
 
         <section className="products-container">
-          {productsList.length > 0 ? (
+          {productCatalog.length > 0 ? (
             <div className="grid-products">
               <ul className="categories-wrapper">
                 <li>{query}</li>
@@ -44,8 +44,8 @@ export const Home = () => {
                 <li>Categoria3</li>
               </ul>
 
-              {productsList.map((item) => (
-                <Card key={item.id} product={item} />
+              {productCatalog.map((item) => (
+                <Card key={item.id} item={item} />
               ))}
             </div>
           ) : (

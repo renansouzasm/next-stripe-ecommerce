@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./styles/global.css";
 
 import { App } from "./App.jsx";
+import { ErrorPage } from "./ErrorPage.jsx";
 import { Home } from "./components/Home/Home";
 import { Product } from "./components/Product/Product";
 import { Cart } from "./components/Cart/Cart";
@@ -13,6 +14,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -31,7 +33,7 @@ const routes = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={routes} />
-  </React.StrictMode>
+  // <React.StrictMode>
+  // </React.StrictMode>
+  <RouterProvider router={routes} />
 );
