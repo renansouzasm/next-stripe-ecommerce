@@ -7,20 +7,20 @@
   opacity: 90%;
 }
 
-.thumbnail,
+.card-thumbnail,
 .infos-product {
   height: 100%;
   max-width: 100%;
 }
 
-.thumbnail {
+.card-thumbnail {
   padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.thumbnail > img {
+.card-thumbnail > img {
   max-height: 90%;
   max-width: 90%;
 }
@@ -34,18 +34,18 @@
   justify-content: space-between;
 }
 
-.reviews,
-.title {
+.card-reviews,
+.card-title {
   font-size: 1.4rem;
 }
 
-.title {
+.card-title {
   font-weight: 600;
   max-height: 40%;
   overflow-y: hidden;
 }
 
-.price {
+.card-price {
   font-size: 1.6rem;
   font-weight: 700;
 }

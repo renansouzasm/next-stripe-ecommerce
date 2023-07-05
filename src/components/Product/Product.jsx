@@ -109,7 +109,7 @@ export const Product = () => {
             </button>
           </div>
 
-          <div className="product">
+          <div className="product-thumbnail">
             <img
               src={storedProduct?.thumbnail?.replace(/\w\.jpg/gi, "W.jpg")}
               alt="thumbnail"
