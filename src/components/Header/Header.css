@@ -6,90 +6,88 @@
   background-color: var(--bg-color);
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 3rem;
   justify-content: space-between;
   grid-row: 1/2;
 }
 
 .logo {
-  gap: 20px;
+  gap: 2rem;
   display: flex;
   align-items: center;
   font-size: 3.2rem;
 }
 
-.input-wrapper {
-  background-color: var(--bg-color2);
-  height: 4rem;
-  width: 65%;
-  max-width: 60rem;
-  padding: 0 20px;
+.logoName {
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.input-wrapper > form {
-  height: 100%;
-  width: 100%;
+.headerRight {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: var(--input-color);
+  gap: 1rem;
 }
 
-.input-wrapper > form > input {
+.searchBar {
+  background-color: var(--bg-color2);
+  height: 5rem;
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  color: var(--input-color);
+  border-radius: 10rem;
+}
+
+.searchInput {
+  padding: 2rem;
   font-size: 1.6rem;
   height: 100%;
-  width: 90%;
+  width: 80%;
   background-color: transparent;
   border: none;
   outline: none;
   color: var(--primary-text-color);
 }
 
-.btns {
-  position: relative;
+.btnSearch {
+  height: 100%;
+  width: 20%;
+  border: none;
+  background-color: transparent;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text-color);
 }
 
-.btn-cart {
-  margin: 0 20px;
+.btnSearch:hover {
+  cursor: pointer;
 }
 
-.btn-cart,
-.btn-menu {
+.btnCart,
+.btnMenu {
+  height: 5rem;
+  width: 5rem;
   background-color: transparent;
   border: none;
   color: var(--primary-text-color);
-  border-radius: 100%;
+  border-radius: 10rem;
   transition: 0.2s;
-  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-cart:hover,
-.btn-menu:hover {
+.btnCart:hover,
+.btnMenu:hover {
   cursor: pointer;
   background-color: var(--bg-color2);
 }
 
 @media screen and (max-width: 1024px) {
-  .logo > strong {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .header {
-    padding: 0 10px;
-  }
-
-  .input-wrapper {
-    border-radius: 10rem;
-    width: 65%;
-  }
-
-  .btn-cart {
-    display: none;
-  }
-
-  .menu {
-    width: 100vw;
-  }
 }

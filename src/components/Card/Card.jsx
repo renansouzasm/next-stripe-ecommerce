@@ -25,24 +25,30 @@ export const Card = ({ item }) => {
   return (
     <Link onClick={showProduct} to={"/product"}>
       <div className="card">
-        <div className="card-thumbnail">
+        <div className="cardThumbnail">
           <img
             src={thumbnail.replace(/\w\.jpg/gi, "W.jpg")}
-            alt="product-preview"
+            alt="productPreview"
           />
         </div>
 
-        <div className="infos-product">
-          <div className="card-reviews">
-            <Star size={12} />
-            <Star size={12} />
-            <Star size={12} />
-            <Star size={12} />
-            <Star size={12} />
-            Reviews
+        <div className="cardInfos">
+          <div className="productDescription">
+            <div className="reviewWrapp">
+              <div className="stars">
+                <Star size={12} />
+                <Star size={12} />
+                <Star size={12} />
+                <Star size={12} />
+                <Star size={12} />
+              </div>
+              <p>Reviews</p>
+            </div>
+
+            <p className="cardTitle">{title}</p>
           </div>
-          <p className="card-title">{title}</p>
-          <p className="card-price">{formatCurrency(price, "BRL")}</p>
+
+          <p className="cardPrice">{formatCurrency(price, "BRL")}</p>
         </div>
       </div>
     </Link>

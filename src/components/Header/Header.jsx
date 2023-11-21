@@ -21,6 +21,40 @@ export const Header = () => {
 
   return (
     <header className="header">
+      <Link to={"/"} className="logo">
+        <GameController size={32} />
+        <h1 className="logoName">React Store</h1>
+      </Link>
+
+      <div className="logo"></div>
+
+      <div className="headerRight">
+        <form method="GET" className="searchBar" onSubmit={handleSearch}>
+          <input
+            className="searchInput"
+            type="text"
+            placeholder="Pesquisar"
+            required
+            onChange={({ target }) => setSearch(target.value)}
+          />
+
+          <button className="btnSearch">
+            <MagnifyingGlass size={22} />
+          </button>
+        </form>
+
+        <Link to={"/cart"}>
+          <button className="btnCart">
+            <ShoppingCartSimple size={22} />
+          </button>
+        </Link>
+
+        <button className="btnMenu">
+          <List size={22} />
+        </button>
+      </div>
+
+      {/*
       <Link to={"/"} className="logoGroup">
         <p className="logo">
           <GameController size={32} /> <strong>React Store</strong>
@@ -48,7 +82,7 @@ export const Header = () => {
         <button className="btn-menu">
           <List size={32} />
         </button>
-      </div>
+      </div> */}
     </header>
   );
 };

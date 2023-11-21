@@ -1,0 +1,28 @@
+.cartCard,
+.test {
+  display: flex;
+  border-radius: 0.5rem;
+  height: 20rem;
+  width: 65rem;
+  background-color: var(--primary-text-color);
+  opacity: 90%;
+  overflow: hidden;
+}
+
+.cardThumb {
+  height: 100%;
+}
+
+.cardThumb > img {
+  height: 100%;
+}
+
+.cardDetails {
+  color: var(--secondary-text-color);
+  padding: 3rem 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 640px) {
+}

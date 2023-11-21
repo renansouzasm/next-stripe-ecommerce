@@ -22,7 +22,7 @@ export const Home = () => {
   return (
     <>
       <main className="main">
-        <section className="banners-container">
+        <section className="bannersContainer">
           <div className="banner">
             <img src={xboxBanner} alt="banner" />
           </div>
@@ -34,22 +34,15 @@ export const Home = () => {
           </div>
         </section>
 
-        <section className="products-container">
+        <section className="content">
           {productCatalog.length > 0 ? (
-            <div className="grid-products">
-              <ul className="categories-wrapper">
-                <li>{query}</li>
-                <li>Categoria1</li>
-                <li>Categoria2</li>
-                <li>Categoria3</li>
-              </ul>
-
+            <div className="productsGrid">
               {productCatalog.map((item) => (
                 <Card key={item.id} item={item} />
               ))}
             </div>
           ) : (
-            <p>Nehum produto encontrado..</p>
+            <p className="notFoundMsg">Nehum produto encontrado..</p>
           )}
         </section>
       </main>
