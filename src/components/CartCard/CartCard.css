@@ -32,8 +32,10 @@
   justify-content: space-between;
 }
 
-.cardTop {
-  font-size: 2.4rem;
+.cardTop > p,
+.cardBottom > p {
+  max-width: 80%;
+  font-size: 1.6rem;
 }
 
 .btnDelete {
@@ -45,14 +47,55 @@
   cursor: pointer;
 }
 
-.cardTop > p,
-.cardBottom > p {
-  max-width: 80%;
-}
-
 .cardBottom {
   font-size: 2rem;
   font-weight: 600;
+}
+
+.productQty {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.productQty > p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.btnsQty {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.btnSub,
+.btnSum {
+  height: 3.2rem;
+  width: 3.2rem;
+  border: none;
+  background-color: #e1e1e6;
+  color: #202020;
+  transition: 0.2s;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.btnSub:hover,
+.btnSum:hover {
+  cursor: pointer;
+  background-color: #262629;
+  color: #e1e1e6;
+}
+
+.btnSub {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.btnSum {
+  border-radius: 0 1rem 1rem 0;
 }
 
 @media screen and (max-width: 640px) {

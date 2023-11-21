@@ -6,7 +6,7 @@ import { AppContext } from "../../context/AppContext";
 import { useContext, useEffect } from "react";
 import { formatCurrency } from "../../utils/formatCurrency";
 
-export const CartCard = ({ item, remove }) => {
+export const CartCard = ({ item, remove, sub, sum }) => {
   const { id, title, price, thumbnail, qty } = item;
   const { setStorage } = useContext(AppContext);
 
@@ -39,7 +39,17 @@ export const CartCard = ({ item, remove }) => {
         </div>
 
         <div className="cardBottom">
-          <div className="btnsQty">{qty}</div>
+          <div className="productQty">
+            <div className="btnsQty">
+              <button className="btnSub" onClick={() => sub(id)}>
+                -
+              </button>
+              <button className="btnSum" onClick={() => sum(id)}>
+                +
+              </button>
+            </div>
+            <p>{qty}</p>
+          </div>
           <p>{formatCurrency(price * qty, "BRL")}</p>
         </div>
       </div>

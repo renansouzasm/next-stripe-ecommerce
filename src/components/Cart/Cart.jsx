@@ -21,7 +21,7 @@ export const Cart = () => {
         setTotal(item.price * item.qty);
       });
     }
-  }, []);
+  }, [getStorage]);
 
   useEffect(() => {
     if (cartStorage) {
@@ -32,10 +32,30 @@ export const Cart = () => {
     }
   }, [cartStorage]);
 
-  function remove(id) {
-    setCartStorage((prevState) => prevState.filter((todo) => todo.id != id));
+  useEffect(() => {
     setStorage("cartStorage", cartStorage);
-    console.log(cartStorage);
+  }, [cartStorage, setStorage]);
+
+  function remove(id) {
+    setCartStorage((prevState) => prevState.filter((item) => item.id !== id));
+  }
+
+  function sub(id) {
+    setCartStorage((prevState) =>
+      prevState.map((item) =>
+        item.id === id
+          ? { ...item, qty: item.qty > 1 ? item.qty - 1 : 1 }
+          : item
+      )
+    );
+  }
+
+  function sum(id) {
+    setCartStorage((prevState) =>
+      prevState.map((item) =>
+        item.id === id ? { ...item, qty: item.qty + 1 } : item
+      )
+    );
   }
 
   return (
@@ -45,7 +65,13 @@ export const Cart = () => {
           <section className="cartContainer">
             <div className="productsColumn">
               {cartStorage.map((item) => (
-                <CartCard key={item.id} item={item} remove={remove} />
+                <CartCard
+                  key={item.id}
+                  item={item}
+                  remove={remove}
+                  sub={sub}
+                  sum={sum}
+                />
               ))}
             </div>
 
