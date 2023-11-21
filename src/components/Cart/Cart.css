@@ -13,4 +13,14 @@
   background-color: var(--primary-text-color);
   width: 33rem;
   height: 60rem;
+  color: var(--secondary-text-color);
+  font-size: 2.4rem;
+  padding: 2rem;
 }
+
+.notFoundMsg > p > a {
+  font-size: 1.6rem;
+  color: aqua;
+}
+
+

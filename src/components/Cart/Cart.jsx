@@ -9,13 +9,34 @@ import { CartCard } from "../CartCard/CartCard.jsx";
 export const Cart = () => {
   const { getStorage, setStorage } = useContext(AppContext);
   const [cartStorage, setCartStorage] = useState([]);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const cart = getStorage("cartStorage");
     if (cart) {
       setCartStorage(cart);
     }
+    if (cartStorage) {
+      cartStorage.map((item) => {
+        setTotal(item.price * item.qty);
+      });
+    }
   }, []);
+
+  useEffect(() => {
+    if (cartStorage) {
+      setTotal(0);
+      setTotal(
+        cartStorage.reduce((acc, item) => acc + item.price * item.qty, 0)
+      );
+    }
+  }, [cartStorage]);
+
+  function remove(id) {
+    setCartStorage((prevState) => prevState.filter((todo) => todo.id != id));
+    setStorage("cartStorage", cartStorage);
+    console.log(cartStorage);
+  }
 
   return (
     <main className="main">
@@ -24,13 +45,13 @@ export const Cart = () => {
           <section className="cartContainer">
             <div className="productsColumn">
               {cartStorage.map((item) => (
-                <Link key={item.id} to={"/product"}>
-                  <CartCard key={item.id} item={item} />
-                </Link>
+                <CartCard key={item.id} item={item} remove={remove} />
               ))}
             </div>
 
-            <aside className="cartResume"></aside>
+            <aside className="cartResume">
+              <h1>{formatCurrency(total, "BRL")}</h1>
+            </aside>
           </section>
         ) : (
           <div className="notFoundMsg">

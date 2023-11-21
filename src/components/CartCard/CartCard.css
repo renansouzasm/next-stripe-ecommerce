@@ -1,9 +1,8 @@
-.cartCard,
-.test {
+.cartCard {
   display: flex;
   border-radius: 0.5rem;
   height: 20rem;
-  width: 65rem;
+  max-width: 65rem;
   background-color: var(--primary-text-color);
   opacity: 90%;
   overflow: hidden;
@@ -21,7 +20,39 @@
   color: var(--secondary-text-color);
   padding: 3rem 2rem;
   width: 100%;
-  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardTop,
+.cardBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardTop {
+  font-size: 2.4rem;
+}
+
+.btnDelete {
+  border: none;
+  background-color: transparent;
+}
+
+.btnDelete:hover {
+  cursor: pointer;
+}
+
+.cardTop > p,
+.cardBottom > p {
+  max-width: 80%;
+}
+
+.cardBottom {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 640px) {

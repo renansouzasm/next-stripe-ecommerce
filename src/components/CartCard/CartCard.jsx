@@ -6,8 +6,8 @@ import { AppContext } from "../../context/AppContext";
 import { useContext, useEffect } from "react";
 import { formatCurrency } from "../../utils/formatCurrency";
 
-export const CartCard = ({ item }) => {
-  const { id, title, price, thumbnail } = item;
+export const CartCard = ({ item, remove }) => {
+  const { id, title, price, thumbnail, qty } = item;
   const { setStorage } = useContext(AppContext);
 
   const showProduct = () => {
@@ -23,14 +23,26 @@ export const CartCard = ({ item }) => {
   };
 
   return (
-    <Link onClick={showProduct} to={"/product"}>
-      <div className="cartCard">
+    <div className="cartCard">
+      <Link onClick={showProduct} to={"/product"}>
         <div className="cardThumb">
-            <img src={thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="preview" />
+          <img src={thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="preview" />
+        </div>
+      </Link>
+
+      <div className="cardDetails">
+        <div className="cardTop">
+          <p>{title}</p>
+          <button className="btnDelete" onClick={() => remove(id)}>
+            <Trash size={22} color="red" />
+          </button>
         </div>
 
-        <div className="cardDetails">Po muito legai isso aQ kkkkcdfsfkdv lol</div>
+        <div className="cardBottom">
+          <div className="btnsQty">{qty}</div>
+          <p>{formatCurrency(price * qty, "BRL")}</p>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 };
