@@ -28,9 +28,8 @@ logo logo para a finzalação do Projeto, pois o planejamento já está pronto, 
 
 Em andamento (ainda não foi adicionado ao repositório)
 - Completar a aba do menu, para ficar disponível após o clique no ícone
-- Criação da Página do Carrinho de Compras para exibir os itens adicionados ao localStorage
 
 O que poderia ser Adicionado
 - Favoritos (algo parecido com o conceito do carrinho)
-- Utilização de algum framework, como tailwind, etc..
+- Utilização de algum framework, como tailwind etc..
 - Página para entrar em contato com o suporte
