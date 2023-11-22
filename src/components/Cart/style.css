@@ -1,0 +1,54 @@
+.cartContainer {
+  display: flex;
+  gap: 3rem;
+}
+
+.productsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cartResume {
+  background-color: var(--primary-text-color);
+  width: 33rem;
+  height: 60rem;
+  color: var(--secondary-text-color);
+  font-size: 2.4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resumeTitle {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.resume > p,
+.resume > p > span {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalValue {
+  border-top: 1px solid #242424;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+.supportLinks > p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.notFoundMsg > p > a {
+  font-size: 1.6rem;
+  color: #3b82f6;
+}

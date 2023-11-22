@@ -1,15 +1,17 @@
-import "./Cart.css";
+import "./style.css";
 
 import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { formatCurrency } from "../../utils/formatCurrency.js";
+import { formatCurrency } from "../../utils/formatCurrency";
 import { Link } from "react-router-dom";
-import { CartCard } from "../CartCard/CartCard.jsx";
+import { CartCard } from "./components/CartCard";
+import { BtnPurchase } from "./components/BtnPurchase";
 
 export const Cart = () => {
   const { getStorage, setStorage } = useContext(AppContext);
   const [cartStorage, setCartStorage] = useState([]);
   const [total, setTotal] = useState(0);
+  const delivery = 60;
 
   useEffect(() => {
     const cart = getStorage("cartStorage");
@@ -76,7 +78,28 @@ export const Cart = () => {
             </div>
 
             <aside className="cartResume">
-              <h1>{formatCurrency(total, "BRL")}</h1>
+              <div className="resume">
+                <h1 className="resumeTitle uppercase">Resumo do Pedido</h1>
+
+                <p>
+                  Subtotal de Produtos{" "}
+                  <span>{formatCurrency(total, "BRL")}</span>
+                </p>
+                <p>
+                  Entrega <span>{formatCurrency(delivery, "BRL")}</span>
+                </p>
+
+                <p className="totalValue uppercase">
+                  Total <span>{formatCurrency(total + delivery, "BRL")}</span>
+                </p>
+
+                <BtnPurchase />
+              </div>
+
+              <div className="supportLinks">
+                <p className="uppercase">Ajuda</p>
+                <p className="uppercase">Reembolsos</p>
+              </div>
             </aside>
           </section>
         ) : (

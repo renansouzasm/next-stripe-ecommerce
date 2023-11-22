@@ -1,10 +1,10 @@
-import "./CartCard.css";
+import "./style.css";
 
 import { Trash } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../../../context/AppContext";
 import { useContext, useEffect } from "react";
-import { formatCurrency } from "../../utils/formatCurrency";
+import { formatCurrency } from "../../../../utils/formatCurrency";
 
 export const CartCard = ({ item, remove, sub, sum }) => {
   const { id, title, price, thumbnail, qty } = item;

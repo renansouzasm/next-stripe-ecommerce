@@ -1,0 +1,15 @@
+.btnPurchase {
+  border: none;
+  background-color: #3b82f6;
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  color: #e1e1e6;
+}
+
+.btnPurchase:hover {
+  background-color: #1d4ed8;
+  cursor: pointer;
+}

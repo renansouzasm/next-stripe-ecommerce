@@ -62,6 +62,10 @@ ul {
   gap: 0.2rem;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 575px) {
   body::-webkit-scrollbar {
     background-color: transparent;

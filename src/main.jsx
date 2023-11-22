@@ -6,7 +6,7 @@ import { App } from "./App.jsx";
 import { ErrorPage } from "./ErrorPage.jsx";
 import { Home } from "./components/Home/Home";
 import { Product } from "./components/Product/Product";
-import { Cart } from "./components/Cart/Cart";
+import { Cart } from "./components/Cart";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
