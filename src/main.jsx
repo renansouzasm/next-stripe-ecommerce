@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./styles/global.css";
 
 import { App } from "./App.jsx";
-import { ErrorPage } from "./ErrorPage.jsx";
-import { Home } from "./components/Home/Home";
-import { Product } from "./components/Product/Product";
-import { Cart } from "./components/Cart";
+import { Error } from "./pages/Error";
+import { Home } from "./pages/Home";
+import { Product } from "./pages/Product";
+import { Cart } from "./pages/Cart";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",

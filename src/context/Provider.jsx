@@ -3,6 +3,7 @@ import { AppContext } from "./AppContext";
 
 export const Provider = ({ children }) => {
   const [query, setQuery] = useState("PC Gamer");
+  const [menu, setMenu] = useState(false);
 
   const getStorage = (item) => {
     const product = JSON.parse(localStorage.getItem(item));
@@ -16,6 +17,8 @@ export const Provider = ({ children }) => {
   const value = {
     query,
     setQuery,
+    menu,
+    setMenu,
     getStorage,
     setStorage,
   };

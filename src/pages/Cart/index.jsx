@@ -61,56 +61,53 @@ export const Cart = () => {
   }
 
   return (
-    <main className="main">
-      <section className="content">
-        {cartStorage.length > 0 ? (
-          <section className="cartContainer">
-            <div className="productsColumn">
-              {cartStorage.map((item) => (
-                <CartCard
-                  key={item.id}
-                  item={item}
-                  remove={remove}
-                  sub={sub}
-                  sum={sum}
-                />
-              ))}
+    <section className="content">
+      {cartStorage.length > 0 ? (
+        <section className="cartContainer">
+          <div className="productsColumn">
+            {cartStorage.map((item) => (
+              <CartCard
+                key={item.id}
+                item={item}
+                remove={remove}
+                sub={sub}
+                sum={sum}
+              />
+            ))}
+          </div>
+
+          <aside className="cartResume">
+            <div className="resume">
+              <h1 className="resumeTitle uppercase">Resumo do Pedido</h1>
+
+              <p>
+                Subtotal de Produtos <span>{formatCurrency(total, "BRL")}</span>
+              </p>
+              <p>
+                Entrega <span>{formatCurrency(delivery, "BRL")}</span>
+              </p>
+
+              <p className="totalValue uppercase">
+                Total <span>{formatCurrency(total + delivery, "BRL")}</span>
+              </p>
+
+              <BtnPurchase />
             </div>
 
-            <aside className="cartResume">
-              <div className="resume">
-                <h1 className="resumeTitle uppercase">Resumo do Pedido</h1>
-
-                <p>
-                  Subtotal de Produtos{" "}
-                  <span>{formatCurrency(total, "BRL")}</span>
-                </p>
-                <p>
-                  Entrega <span>{formatCurrency(delivery, "BRL")}</span>
-                </p>
-
-                <p className="totalValue uppercase">
-                  Total <span>{formatCurrency(total + delivery, "BRL")}</span>
-                </p>
-
-                <BtnPurchase />
-              </div>
-
-              <div className="supportLinks">
-                <p className="uppercase">Ajuda</p>
-                <p className="uppercase">Reembolsos</p>
-              </div>
-            </aside>
-          </section>
-        ) : (
-          <div className="notFoundMsg">
-            <p>Seu Carrinho está vazio</p>
-            <p>
-              Continuar <Link to={"/"}>Navegando</Link>?
-            </p>
-          </div>
-        )}
-      </section>
-    </main>
+            <div className="supportLinks">
+              <p className="uppercase">Ajuda</p>
+              <p className="uppercase">Reembolsos</p>
+            </div>
+          </aside>
+        </section>
+      ) : (
+        <div className="notFoundMsg">
+          <p>Seu Carrinho está vazio</p>
+          <p>
+            Continuar <Link to={"/"}>Navegando</Link>?
+          </p>
+        </div>
+      )}
+    </section>
   );
 };

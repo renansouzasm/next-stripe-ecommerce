@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./style.css";
 
 import {
   GameController,
@@ -11,7 +11,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 
 export const Header = () => {
-  const { setQuery } = useContext(AppContext);
+  const { setQuery, setMenu } = useContext(AppContext);
   const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
@@ -49,40 +49,10 @@ export const Header = () => {
           </button>
         </Link>
 
-        <button className="btnMenu">
+        <button className="btnMenu" onClick={() => setMenu(true)}>
           <List size={22} />
         </button>
       </div>
-
-      {/*
-      <Link to={"/"} className="logoGroup">
-        <p className="logo">
-          <GameController size={32} /> <strong>React Store</strong>
-        </p>
-      </Link>
-
-      <div className="input-wrapper">
-        <form method="GET" onSubmit={handleSearch}>
-          <input
-            type="text"
-            placeholder="Pesquisar"
-            required
-            onChange={({ target }) => setSearch(target.value)}
-          />
-          <MagnifyingGlass size={16} />
-        </form>
-      </div>
-
-      <div className="btns">
-        <Link to={"/cart"}>
-          <button className="btn-cart">
-            <ShoppingCartSimple size={32} />
-          </button>
-        </Link>
-        <button className="btn-menu">
-          <List size={32} />
-        </button>
-      </div> */}
     </header>
   );
 };

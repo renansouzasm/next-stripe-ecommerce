@@ -1,10 +1,10 @@
-import "./Card.css";
+import "./style.css";
 
 import { Star } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../../../context/AppContext";
 import { useContext, useEffect } from "react";
-import { formatCurrency } from "../../utils/formatCurrency";
+import { formatCurrency } from "../../../../utils/formatCurrency";
 
 export const Card = ({ item }) => {
   const { id, title, price, thumbnail } = item;

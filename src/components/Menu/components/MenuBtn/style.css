@@ -1,0 +1,20 @@
+.menuBtn {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  background-color: #262629;
+  border-radius: 10rem;
+  margin-bottom: 2rem;
+  transition: 0.2s;
+  float: right;
+}
+
+.menuBtn:hover {
+  cursor: pointer;
+  background-color: #262629;
+}

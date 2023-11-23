@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./style.css";
 
 import { GithubLogo } from "@phosphor-icons/react";
 

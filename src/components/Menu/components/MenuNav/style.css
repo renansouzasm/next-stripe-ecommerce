@@ -1,0 +1,22 @@
+.navBtn {
+  border: none;
+  color: #e1e1e6;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  font-size: 1.6rem;
+  transition: 0.2s;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.navBtn:hover {
+  cursor: pointer;
+  background-color: #262629;
+}
+
+.disabled {
+  color: gray;
+}
