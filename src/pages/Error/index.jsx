@@ -1,7 +1,9 @@
+import "./style.css";
+
 export const Error = () => {
   return (
-    <div>
-      <h1>{"Algo deu Errado! :)"}</h1>
+    <div className="errorContainer">
+      <h1>404!</h1>
     </div>
   );
 };

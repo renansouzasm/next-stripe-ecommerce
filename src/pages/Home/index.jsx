@@ -36,9 +36,12 @@ export const Home = () => {
         {productCatalog.length > 0 ? (
           <div className="productsGrid">
             {productCatalog.map((item) => (
-              <Link onClick={() => showProduct(item)} to={"/product"}>
+              <Link 
+                key={item.id} 
+                onClick={() => showProduct(item)} 
+                to={"/product"}>
+                  
                 <ProductCard
-                  key={item.id}
                   item={item}
                   formatCurrency={formatCurrency}
                 />
