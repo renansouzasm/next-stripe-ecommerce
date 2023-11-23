@@ -1,0 +1,13 @@
+.reviewWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewStars {
+  display: flex;
+}
+
+.reviewWrap > p {
+  font-size: 1.2rem;
+}

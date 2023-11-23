@@ -1,0 +1,35 @@
+.searchBar {
+  background-color: var(--bg-color2);
+  height: 5rem;
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10rem;
+}
+
+.searchInput {
+  padding: 2rem;
+  font-size: 1.6rem;
+  height: 100%;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color1);
+}
+
+.searchBtn {
+  height: 100%;
+  width: 20%;
+  border: none;
+  background-color: transparent;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-disabled);
+}
+
+.searchBtn:hover {
+  cursor: pointer;
+}

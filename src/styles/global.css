@@ -1,14 +1,19 @@
 :root {
-  --bg-color: #121212;
-  --bg-color1: #fff;
+  --bg-color1: #121212;
   --bg-color2: #262629;
-  --bg-color3: #eee;
-  --primary-text-color: #fff;
-  --secondary-text-color: #000;
-  --input-color: #6b7280;
-  --btn-color: #3b82f6;
-  --hover-btn-color: #1d4ed8;
-  --accent-color: #dc2626;
+  --bg-color3: #fff;
+  --bg-color4: #e1e1e6;
+
+  --text-color1: #fff;
+  --text-color2: #e1e1e6;
+  --text-color3: #000;
+  --text-color4: #242424;
+  --text-color-disabled: #6b7280;
+
+  --btn-color: #ee9b00;
+  --btn-color-hover: #ca6702;
+
+  --red-color: #dc2626;
 }
 
 * {
@@ -21,11 +26,9 @@
 
 body {
   min-width: 28rem;
-  color: var(--primary-text-color);
-  background-color: var(--bg-color);
+  color: var(--text-color2);
+  background-color: var(--bg-color1);
   position: relative;
-  display: grid;
-  grid-template-rows: 7rem 1fr 7rem;
 }
 
 body::-webkit-scrollbar {
@@ -37,29 +40,23 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-color2);
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-text-color);
-}
-
-ul {
-  list-style: none;
-}
-
 #root {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 7rem 1fr 7rem;
 }
 
-.main {
-  grid-row: 2/3;
+a {
+  text-decoration: none;
+  color: var(--text-color2);
 }
 
-.reviews {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
+ul {
+  list-style: none;
+}
+
+.main {
+  grid-row: 2/3;
 }
 
 .uppercase {

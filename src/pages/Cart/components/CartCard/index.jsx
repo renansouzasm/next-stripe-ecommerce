@@ -34,7 +34,7 @@ export const CartCard = ({ item, remove, sub, sum }) => {
         <div className="cardTop">
           <p>{title}</p>
           <button className="btnDelete" onClick={() => remove(id)}>
-            <Trash size={22} color="red" />
+            <Trash size={22} />
           </button>
         </div>
 

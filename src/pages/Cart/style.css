@@ -10,15 +10,16 @@
 }
 
 .cartResume {
-  background-color: var(--primary-text-color);
+  background-color: var(--bg-color3);
   width: 33rem;
   height: 60rem;
-  color: var(--secondary-text-color);
+  color: var(--text-color4);
   font-size: 2.4rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 90%;
 }
 
 .resumeTitle {
@@ -35,7 +36,7 @@
 }
 
 .totalValue {
-  border-top: 1px solid #242424;
+  border-top: 1px solid var(--text-color4);
   margin-top: 3rem;
   padding-top: 1rem;
   margin-bottom: 4rem;

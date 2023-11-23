@@ -3,7 +3,7 @@
   border-radius: 0.5rem;
   height: 20rem;
   max-width: 65rem;
-  background-color: var(--primary-text-color);
+  background-color: var(--bg-color3);
   opacity: 90%;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@
 }
 
 .cardDetails {
-  color: var(--secondary-text-color);
+  color: var(--text-color4);
   padding: 3rem 2rem;
   width: 100%;
   display: flex;
@@ -41,6 +41,7 @@
 .btnDelete {
   border: none;
   background-color: transparent;
+  color: var(--red-color);
 }
 
 .btnDelete:hover {
@@ -73,8 +74,8 @@
   height: 3.2rem;
   width: 3.2rem;
   border: none;
-  background-color: #e1e1e6;
-  color: #202020;
+  background-color: var(--bg-color4);
+  color: var(--text-color4);
   transition: 0.2s;
   font-size: 1.6rem;
   display: flex;
@@ -86,8 +87,8 @@
 .btnSub:hover,
 .btnSum:hover {
   cursor: pointer;
-  background-color: #262629;
-  color: #e1e1e6;
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
 }
 
 .btnSub {

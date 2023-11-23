@@ -1,5 +1,7 @@
 import "./style.css";
 
+import { ReviewWrap } from "../../components/ReviewWrap";
+
 import { AppContext } from "../../context/AppContext";
 import { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -67,14 +69,7 @@ export const Product = () => {
               <h2>{formatCurrency(storedProduct?.price ?? 1000, "BRL")}</h2>
             </hgroup>
 
-            <div className="reviews">
-              <Star size={12} />
-              <Star size={12} />
-              <Star size={12} />
-              <Star size={12} />
-              <Star size={12} />
-              Reviews
-            </div>
+            <ReviewWrap />
 
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting

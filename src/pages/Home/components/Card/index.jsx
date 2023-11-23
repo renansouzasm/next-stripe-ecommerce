@@ -1,9 +1,10 @@
 import "./style.css";
 
-import { Star } from "@phosphor-icons/react";
+import { ReviewWrap } from "../../../../components/ReviewWrap";
+
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../../context/AppContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { formatCurrency } from "../../../../utils/formatCurrency";
 
 export const Card = ({ item }) => {
@@ -34,16 +35,7 @@ export const Card = ({ item }) => {
 
         <div className="cardInfos">
           <div className="productDescription">
-            <div className="reviewWrapp">
-              <div className="stars">
-                <Star size={12} />
-                <Star size={12} />
-                <Star size={12} />
-                <Star size={12} />
-                <Star size={12} />
-              </div>
-              <p>Reviews</p>
-            </div>
+            <ReviewWrap />
 
             <p className="cardTitle">{title}</p>
           </div>

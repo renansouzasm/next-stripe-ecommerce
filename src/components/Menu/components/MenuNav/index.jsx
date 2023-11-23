@@ -1,18 +1,11 @@
 import "./style.css";
 
-import { Link } from "react-router-dom";
-import { AppContext } from "../../../../context/AppContext";
-import { useContext } from "react";
-
-export const MenuNav = () => {
-  const { setMenu } = useContext(AppContext);
-
+export const MenuNav = ({ Link, setMenu }) => {
   return (
     <div className="menuNav">
       <ul>
-        <Link>
-          <button className="navBtn uppercase disabled">Conta</button>
-        </Link>
+        <button className="navBtn uppercase disabled">Conta</button>
+
         <Link to={"/"}>
           <button className="navBtn uppercase" onClick={() => setMenu(false)}>
             Home
@@ -23,24 +16,18 @@ export const MenuNav = () => {
             Carrinho
           </button>
         </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Categorias</button>
-        </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Favoritos</button>
-        </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Contato</button>
-        </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Ajuda</button>
-        </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Políticas</button>
-        </Link>
-        <Link>
-          <button className="navBtn uppercase disabled">Redes Sociais</button>
-        </Link>
+
+        <button className="navBtn uppercase disabled">Categorias</button>
+
+        <button className="navBtn uppercase disabled">Favoritos</button>
+
+        <button className="navBtn uppercase disabled">Contato</button>
+
+        <button className="navBtn uppercase disabled">Ajuda</button>
+
+        <button className="navBtn uppercase disabled">Políticas</button>
+
+        <button className="navBtn uppercase disabled">Redes Sociais</button>
       </ul>
     </div>
   );

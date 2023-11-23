@@ -17,7 +17,7 @@
 }
 
 .route > span {
-  color: var(--input-color);
+  color: var(--text-color-disabled);
 }
 
 .infos {
@@ -52,7 +52,7 @@
 }
 
 .infos > p > a {
-  color: var(--hover-btn-color);
+  color: var(--btn-color-hover);
   font-style: italic;
 }
 
@@ -61,7 +61,8 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--primary-text-color);
+  border-radius: 0.5rem;
+  color: var(--text-color2);
   outline: none;
   border: none;
   gap: 1rem;
@@ -74,11 +75,11 @@
 
 .btnAddCart:hover {
   cursor: pointer;
-  background-color: var(--hover-btn-color);
+  background-color: var(--btn-color-hover);
 }
 
 .product-thumbnail {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color3);
   opacity: 90%;
 
   display: flex;
@@ -95,7 +96,7 @@
     grid-template-columns: 1fr;
   }
 
-  .product {
+  .product-thumbnail {
     grid-row: 1/2;
   }
 

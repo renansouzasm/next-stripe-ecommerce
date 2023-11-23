@@ -1,5 +1,9 @@
 import "./style.css";
 
+import { SearchBar } from "./components/SearchBar";
+import { MenuOpenBtn } from "./components/MenuOpenBtn";
+import { CartBtn } from "./components/CartBtn";
+
 import {
   GameController,
   MagnifyingGlass,
@@ -26,32 +30,18 @@ export const Header = () => {
         <h1 className="logoName">React Store</h1>
       </Link>
 
-      <div className="logo"></div>
-
       <div className="headerRight">
-        <form method="GET" className="searchBar" onSubmit={handleSearch}>
-          <input
-            className="searchInput"
-            type="text"
-            placeholder="Pesquisar"
-            required
-            onChange={({ target }) => setSearch(target.value)}
-          />
-
-          <button className="btnSearch">
-            <MagnifyingGlass size={22} />
-          </button>
-        </form>
+        <SearchBar
+          MagnifyingGlass={MagnifyingGlass}
+          handleSearch={handleSearch}
+          setSearch={setSearch}
+        />
 
         <Link to={"/cart"}>
-          <button className="btnCart">
-            <ShoppingCartSimple size={22} />
-          </button>
+          <CartBtn ShoppingCartSimple={ShoppingCartSimple} />
         </Link>
 
-        <button className="btnMenu" onClick={() => setMenu(true)}>
-          <List size={22} />
-        </button>
+        <MenuOpenBtn List={List} setMenu={setMenu} />
       </div>
     </header>
   );
