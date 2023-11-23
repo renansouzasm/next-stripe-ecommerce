@@ -1,16 +1,16 @@
 import "./style.css";
 
-import { Card } from "./components/Card";
+import { BannersContainer } from "./components/BannersContainer";
+import { ProductCard } from "./components/ProductCard/index.jsx";
 
-import xboxBanner from "../../assets/xboxBanner.jpg";
-import iphoneBanner from "../../assets/iphoneBanner.jpg";
-import ps5Banner from "../../assets/ps5Banner.jpg";
+import { Link } from "react-router-dom";
+import { formatCurrency } from "../../utils/formatCurrency.js";
 import { useEffect, useContext, useState } from "react";
 import { fetchApi } from "../../api/api.js";
 import { AppContext } from "../../context/AppContext.js";
 
 export const Home = () => {
-  const { query } = useContext(AppContext);
+  const { query, setStorage } = useContext(AppContext);
   const [productCatalog, setProductCatalog] = useState([]);
 
   useEffect(() => {
@@ -19,25 +19,30 @@ export const Home = () => {
     });
   }, [query]);
 
+  const showProduct = (item) => {
+    const product = {
+      ...item,
+    };
+
+    setStorage("storedProduct", product);
+    return;
+  };
+
   return (
     <>
-      <section className="bannersContainer">
-        <div className="banner">
-          <img src={xboxBanner} alt="banner" />
-        </div>
-        <div className="banner">
-          <img src={iphoneBanner} alt="banner" />
-        </div>
-        <div className="banner">
-          <img src={ps5Banner} alt="banner" />
-        </div>
-      </section>
+      <BannersContainer />
 
       <section className="content">
         {productCatalog.length > 0 ? (
           <div className="productsGrid">
             {productCatalog.map((item) => (
-              <Card key={item.id} item={item} />
+              <Link onClick={() => showProduct(item)} to={"/product"}>
+                <ProductCard
+                  key={item.id}
+                  item={item}
+                  formatCurrency={formatCurrency}
+                />
+              </Link>
             ))}
           </div>
         ) : (

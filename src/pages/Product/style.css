@@ -76,6 +76,7 @@
 .btnAddCart:hover {
   cursor: pointer;
   background-color: var(--btn-color-hover);
+  color: var(--text-color1);
 }
 
 .product-thumbnail {

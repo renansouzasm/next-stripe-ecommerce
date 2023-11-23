@@ -1,4 +1,4 @@
-.menuBtn {
+.menuCloseBtn {
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -13,7 +13,7 @@
   float: right;
 }
 
-.menuBtn:hover {
+.menuCloseBtn:hover {
   cursor: pointer;
   background-color: var(--bg-color2);
 }

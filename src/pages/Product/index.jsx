@@ -97,7 +97,7 @@ export const Product = () => {
             </p>
           </div>
 
-          <button className="btnAddCart" onClick={addCart}>
+          <button className="btnAddCart uppercase" onClick={addCart}>
             <ShoppingCartSimple />
             <p>Adicionar ao carrinho</p>
           </button>

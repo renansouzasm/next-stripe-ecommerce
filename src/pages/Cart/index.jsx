@@ -4,8 +4,8 @@ import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { Link } from "react-router-dom";
-import { CartCard } from "./components/CartCard";
-import { BtnPurchase } from "./components/BtnPurchase";
+import { CartProductCard } from "./components/CartProductCard";
+import { PurchaseBtn } from "./components/PurchaseBtn";
 
 export const Cart = () => {
   const { getStorage, setStorage } = useContext(AppContext);
@@ -66,7 +66,7 @@ export const Cart = () => {
         <section className="cartContainer">
           <div className="productsColumn">
             {cartStorage.map((item) => (
-              <CartCard
+              <CartProductCard
                 key={item.id}
                 item={item}
                 remove={remove}
@@ -91,7 +91,7 @@ export const Cart = () => {
                 Total <span>{formatCurrency(total + delivery, "BRL")}</span>
               </p>
 
-              <BtnPurchase />
+              <PurchaseBtn />
             </div>
 
             <div className="supportLinks">

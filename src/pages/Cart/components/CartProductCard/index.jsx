@@ -6,7 +6,7 @@ import { AppContext } from "../../../../context/AppContext";
 import { useContext, useEffect } from "react";
 import { formatCurrency } from "../../../../utils/formatCurrency";
 
-export const CartCard = ({ item, remove, sub, sum }) => {
+export const CartProductCard = ({ item, remove, sub, sum }) => {
   const { id, title, price, thumbnail, qty } = item;
   const { setStorage } = useContext(AppContext);
 

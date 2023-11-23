@@ -1,4 +1,4 @@
-.btnPurchase {
+.purchaseBtn {
   border: none;
   background-color: var(--btn-color);
   font-size: 1.6rem;
@@ -9,7 +9,8 @@
   color: var(--text-color2);
 }
 
-.btnPurchase:hover {
+.purchaseBtn:hover {
   background-color: var(--btn-color-hover);
+  color: var(--text-color1);
   cursor: pointer;
 }

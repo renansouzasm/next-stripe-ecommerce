@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { MenuBtn } from "./components/MenuBtn";
+import { MenuCloseBtn } from "./components/MenuCloseBtn";
 import { MenuNav } from "./components/MenuNav";
 
 import { X } from "@phosphor-icons/react";
@@ -16,7 +16,7 @@ export const Menu = () => {
       className="menu"
       style={menu == true ? { display: "block" } : { display: "none" }}
     >
-      <MenuBtn X={X} setMenu={setMenu} />
+      <MenuCloseBtn X={X} setMenu={setMenu} />
       <MenuNav Link={Link} setMenu={setMenu} />
     </div>
   );

@@ -1,0 +1,14 @@
+.bannersContainer {
+  height: 25rem;
+  display: flex;
+}
+
+.banner {
+  object-fit: cover;
+  width: calc(100% / 3);
+}
+
+.banner > img {
+  height: 100%;
+  width: 100%;
+}
