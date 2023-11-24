@@ -26,9 +26,9 @@
   </tr>
   <tr>
     <td colspan="3">
-      <img width="30%" src="https://github.com/renansouzasm/React-store/assets/101893896/1d15ebcf-7b8f-48fd-a56f-ae47924a5719" alt="preview"/>
-      <img width="30%"src="https://github.com/renansouzasm/React-store/assets/101893896/ab62811c-6835-466a-b29a-8fb2798767ab" alt="preview"/>
-      <img width="30%" src="https://github.com/renansouzasm/React-store/assets/101893896/5c672437-0f29-4eb0-a961-c87e88cfdb54" alt="preview"/>
+      <img width="32%" src="https://github.com/renansouzasm/React-store/assets/101893896/1d15ebcf-7b8f-48fd-a56f-ae47924a5719" alt="preview"/>
+      <img width="32%"src="https://github.com/renansouzasm/React-store/assets/101893896/ab62811c-6835-466a-b29a-8fb2798767ab" alt="preview"/>
+      <img width="32%" src="https://github.com/renansouzasm/React-store/assets/101893896/5c672437-0f29-4eb0-a961-c87e88cfdb54" alt="preview"/>
     </td>
   </tr>
 </table>
