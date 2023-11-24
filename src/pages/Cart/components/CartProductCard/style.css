@@ -10,6 +10,9 @@
 
 .cardThumb {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardThumb > img {
@@ -100,4 +103,32 @@
 }
 
 @media screen and (max-width: 640px) {
+  .cartCard {
+    height: 15rem;
+  }
+
+  .cardDetails {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .cardThumb > img {
+    height: 60%;
+  }
+
+  .cardTop {
+    max-height: 60%;
+    overflow: hidden;
+  }
+
+  .btnSub,
+  .btnSum {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .productQty {
+    gap: 0.2rem;
+  }
 }

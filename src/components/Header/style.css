@@ -51,7 +51,28 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .cartBtn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .searchBar {
+    display: none;
+    width: 100rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .headerRight {
+    justify-content: end;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }

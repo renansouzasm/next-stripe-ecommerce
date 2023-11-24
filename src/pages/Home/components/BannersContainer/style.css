@@ -12,3 +12,27 @@
   height: 100%;
   width: 100%;
 }
+
+@media screen and (max-width: 810px) {
+  .bannersContainer {
+    height: 20rem;
+  }
+
+  .banner:nth-child(3) {
+    display: none;
+  }
+
+  .banner {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .banner:nth-child(1) {
+    display: none;
+  }
+
+  .banner {
+    width: 100%;
+  }
+}

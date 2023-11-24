@@ -22,8 +22,8 @@
 }
 
 .productCardThumbnail > img {
-  max-height: 90%;
-  max-width: 90%;
+  height: 90%;
+  width: 90%;
 }
 
 .productCardInfos {
@@ -48,4 +48,23 @@
 }
 
 @media screen and (max-width: 640px) {
+  .productCard {
+    width: 90%;
+    margin: auto;
+    height: 17rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .productCardThumbnail > img {
+    height: 90%;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .productCardThumbnail > img {
+    height: 50%;
+    width: 90%;
+  }
 }

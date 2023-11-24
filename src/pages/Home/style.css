@@ -15,14 +15,20 @@
   font-size: 1.6rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 640px) {
-}
-
-@media screen and (max-width: 430px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
 }

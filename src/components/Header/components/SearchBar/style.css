@@ -33,3 +33,19 @@
 .searchBtn:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .searchBar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .searchBtn {
+    display: none;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}
