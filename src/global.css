@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  @import url("https://fonts.googleapis.com/css2?family=Alice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+  html,
+  body {
+    @apply bg-bgColor1 text-textColor1 min-w-72 w-full min-h-screen;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  #root {
+    @apply flex flex-col min-h-screen;
+  }
+
+  .btnQty {
+    @apply bg-btnCountColor1 hover:bg-btnCountColor2;
+    @apply cursor-pointer w-8 h-8 rounded-full text-xs flex justify-center items-center;
+  }
+
+  .btnNavBar {
+    @apply bg-textColor3 ease-in-out text-sm h-9 w-9 rounded-full flex justify-center items-center;
+  }
+
+  main {
+    @apply w-full flex-1 flex flex-col py-8;
+  }
+}
