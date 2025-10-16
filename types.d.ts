@@ -16,6 +16,12 @@ interface IProductCardProps {
   product: Stripe.Product;
 }
 
+type IProductPageProps = {
+  params: {
+    id: string;
+  };
+};
+
 interface IProductDetailProps {
   product: Stripe.Product;
 }
