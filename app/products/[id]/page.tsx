@@ -6,6 +6,7 @@ type ProductPageProps = {
   params: {
     id: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 export default async function ProductPage({ params }: ProductPageProps) {
