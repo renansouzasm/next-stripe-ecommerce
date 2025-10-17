@@ -9,7 +9,7 @@
 <img width="400" height="646" alt="next-stripe-ecommerce-checkout" src="https://github.com/user-attachments/assets/99259f9a-c99f-4ca2-9cfe-97b19641024c" />
 
 
-### Tecnologias:
+### Tecnologias
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
