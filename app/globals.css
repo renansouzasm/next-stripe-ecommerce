@@ -116,7 +116,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .layout-space {
+    @apply md:px-20 lg:px-48
   }
 }

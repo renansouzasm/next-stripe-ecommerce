@@ -10,7 +10,7 @@ export const checkoutAction = async (formData: FormData): Promise<void> => {
 
   const line_items = items.map((item: CartItem) => ({
     price_data: {
-      currency: "cad",
+      currency: "brl",
       product_data: { name: item.name },
       unit_amount: item.price,
     },

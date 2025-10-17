@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { stripe } from "@/lib/stripe";
 import Image from "next/image";
 import Link from "next/link";
+import beats from "@/public/beats.png";
 
 export default async function Home() {
   const products = await stripe.products.list({
@@ -11,42 +12,41 @@ export default async function Home() {
   });
 
   return (
-    <div>
-      <section className="rounded bg-neutral-100 py-8 sm:py-12">
-        <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
-          <div className="max-w-md space-x-4">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+    <div className="space-y-12 layout-space">
+      <section className="rounded-md bg-neutral-100 py-12 sm:py-16">
+        <div className="mx-auto grid grid-cols-1 items-center gap-8 px-6 sm:px-12 md:grid-cols-2 md:gap-12">
+          <div className="max-w-md space-y-6">
+            <h2 className="text-lg font-bold tracking-tight text-gray-900 md:text-5xl leading-tight">
               Welcome to my ecommerce
             </h2>
-            <p className="text-neutral-600">
+
+            <p className="text-lg text-neutral-600 leading-relaxed">
               Discover the latest products at the best prices.
             </p>
 
             <Button
-              className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black text-white"
+              className="inline-flex items-center justify-center rounded-full px-8 py-6 bg-black text-white hover:bg-gray-800 text-md font-semibold transition-all"
               asChild
               variant="default"
             >
-              <Link
-                className="inline-flex items-center justify-center rounded-full px-6 py-3"
-                href={"/products"}
-              >
-                Browse All Products
-              </Link>
+              <Link href={"/products"}>Browse All Products</Link>
             </Button>
           </div>
 
-          <Image
-            className="rounded"
-            alt="Banner Image"
-            width={450}
-            height={450}
-            src={products.data[0].images[0]}
-          />
+          <div className="relative w-full aspect-square max-w-md mx-auto md:max-w-none">
+            <Image
+              className="object-cover"
+              alt="Banner Image"
+              src={beats || "/placeholder.svg"}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+          </div>
         </div>
       </section>
 
-      <section className="py-8">
+      <section>
         <Carousel products={products.data} />
       </section>
     </div>

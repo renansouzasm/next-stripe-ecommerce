@@ -1,10 +1,11 @@
 "use client";
 
-import { ICarouselProps } from "@/types";
+import type { ICarouselProps } from "@/types";
 import { Card, CardContent, CardTitle } from ".//ui/card";
 import { useEffect, useState } from "react";
-import Stripe from "stripe";
+import type Stripe from "stripe";
 import Image from "next/image";
+import { formatPriceBRL } from "@/lib/utils";
 
 export function Carousel({ products }: ICarouselProps) {
   const [current, setCurrent] = useState<number>(0);
@@ -22,27 +23,28 @@ export function Carousel({ products }: ICarouselProps) {
   const price = currentProduct.default_price as Stripe.Price;
 
   return (
-    <Card className="relative overflow-hidden rounded-lg shadow-md border-gray-300">
+    <Card className="relative rounded-md overflow-hidden">
       {currentProduct.images && currentProduct.images[0] && (
-        <div className="relative h-80 w-full">
+        <div className="relative w-full aspect-[21/9] sm:aspect-[16/7] md:aspect-[21/9]">
           <Image
-            className="transition-opacity duration-500 ease-in-out"
+            className="transition-opacity duration-500 ease-in-out object-contain"
             alt={currentProduct.name}
-            src={currentProduct.images[0]}
-            layout="fill"
-            objectFit="cover"
+            src={currentProduct.images[0] || "/placeholder.svg"}
+            fill
+            sizes="100vw"
+            priority
           />
         </div>
       )}
 
-      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-        <CardTitle className="text-3xl font-bold text-white mb-2">
+      <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black/50">
+        <CardTitle className="text-2xl md:text-5xl font-bold text-white mb-3 text-center px-4 drop-shadow-lg">
           {currentProduct.name}
         </CardTitle>
 
         {price && price.unit_amount && (
-          <p className="text-xl text-white">
-            {(price.unit_amount / 100).toFixed(2)}
+          <p className="text-2xl font-semibold text-white drop-shadow-lg">
+            {formatPriceBRL(price.unit_amount)}
           </p>
         )}
       </CardContent>
