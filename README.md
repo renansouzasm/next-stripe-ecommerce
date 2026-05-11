@@ -2,7 +2,8 @@
 
 > E-commerce em Next.js & Stripe (Beats) é um projeto de e-commerce simples construído com Next.js, TypeScript e Tailwind, focado em fones da Beats. A aplicação inclui um carrinho de compras e integração de pagamento com Stripe Checkout.
 
-<img width="800" alt="next-stripe-thumb" src="https://github.com/user-attachments/assets/27bce453-3f3a-442d-b84d-48aff87519b9" />
+<img width="800" alt="next-stripe-thumb" src="https://github.com/user-attachments/assets/08b60cde-f8bb-4834-806a-80e21038e157" />
+
 
 ### Tecnologias
 
