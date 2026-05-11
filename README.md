@@ -2,19 +2,14 @@
 
 > E-commerce em Next.js & Stripe (Beats) é um projeto de e-commerce simples construído com Next.js, TypeScript e Tailwind, focado em fones da Beats. A aplicação inclui um carrinho de compras e integração de pagamento com Stripe Checkout.
 
-### Página de produtos
-<img width="400" alt="next-stripe-ecommerce-products" src="https://github.com/user-attachments/assets/37134dc3-c310-4007-9733-95a4f67568a0" />
-
-### Página de pagamento pela Stripe
-<img width="400" height="646" alt="next-stripe-ecommerce-checkout" src="https://github.com/user-attachments/assets/99259f9a-c99f-4ca2-9cfe-97b19641024c" />
-
+<img width="800" alt="next-stripe-thumb" src="https://github.com/user-attachments/assets/27bce453-3f3a-442d-b84d-48aff87519b9" />
 
 ### Tecnologias
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-5469d4?style=for-the-badge&logo=stripe&logoColor=ffffff)
+![Next JS](https://img.shields.io/badge/Next-black?&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?&logo=tailwind-css&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-5469d4?&logo=stripe&logoColor=ffffff)
 
 ### 🚀 Guia Rápido de Instalação
 1. Instale as dependências/pacotes do projeto:
